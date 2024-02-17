@@ -95,7 +95,6 @@ async def load_age(message: types.Message, state: FSMContext):
 
 async def load_photo(message: types.Message, state: FSMContext):
     db = DataBase()
-
     path = await message.photo[-1].download(
         destination_dir=DESTINATION
     )
