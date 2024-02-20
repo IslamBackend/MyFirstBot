@@ -6,7 +6,9 @@ from handlers import (
     call_back,
     chat_actions,
     registration,
-    profile
+    profile,
+    reference,
+    errors
 )
 
 
@@ -16,9 +18,11 @@ async def on_startup(_):
 
 
 start.register_start_handlers(dp=dp)
+errors.register_error_handlers(dp=dp)
 call_back.register_call_back_handlers(dp=dp)
 registration.register_registration_handlers(dp=dp)
 profile.register_profile_handlers(dp=dp)
+reference.register_reference_handlers(dp=dp)
 chat_actions.register_chat_actions_handlers(dp=dp)
 
 
